@@ -1,0 +1,4 @@
+databases[sqlite]
+fastapi
+uvicorn
+python-dotenv
