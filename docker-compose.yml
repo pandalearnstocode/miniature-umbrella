@@ -5,7 +5,15 @@ services:
     build: .
     command: uvicorn a-svc.main:app --reload --workers 1 --host 0.0.0.0 --port 8000
     ports:
-      - 8004:8000
+      - 8001:8000
+    environment:
+      - ENVIRONMENT=dev
+      - TESTING=0
+  auth-svc:
+    build: .
+    command: uvicorn auth-svc.main:app --reload --workers 1 --host 0.0.0.0 --port 8000
+    ports:
+      - 8002:8000
     environment:
       - ENVIRONMENT=dev
       - TESTING=0
