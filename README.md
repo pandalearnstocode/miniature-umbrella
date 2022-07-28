@@ -8,7 +8,6 @@
 docker build --build-arg directory_variable=./a-svc -t a-svc .
 ```
 
-
 ### TODOs:
 
 * How to authenticate a user?
